@@ -11,3 +11,8 @@
     --site-margin: 20px;
 }
 
+.clipper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
