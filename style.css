@@ -4,6 +4,7 @@
 
 /* styles/_base.scss */
 :root {
+  --color: #fff;
   --site-margin: 40px;
   --container-width: var(--grid-width);
   --container-height: 800px;
