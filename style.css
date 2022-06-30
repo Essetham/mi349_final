@@ -134,6 +134,22 @@ carbon-item .item {
   background-position: center;
 }
 
+/* styles/blocks/grid.scss */
+carbon-grid.smart carbon-item:not(:last-child) { margin-right: var(--gap-x); }
+carbon-grid.smart carbon-item { box-sizing: border-box; }
+carbon-grid.smart carbon-row:not(:last-child) { margin-bottom: var(--gap-x); }
+carbon-grid.smart carbon-row carbon-item { position: relative; }
+carbon-item carbon-image .caption { display: none; }
+.fluid carbon-grid.smart carbon-row {
+  padding-left: var(--gap-x);
+  padding-right: var(--gap-x);
+}
+@media (max-width: 801px) {
+  .portfolio.grid carbon-grid carbon-item { margin-bottom: 10px !important; }
+  .portfolio.grid carbon-grid { grid-gap: 0 !important; }
+  .block.about:not(.align-x-start) > .content { text-align: center; }
+}
+
 /* styles/blocks/private.scss */
 .private-block {
   display: block;
