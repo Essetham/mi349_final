@@ -1,535 +1,456 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Shimin Sun</title>
-    <style id="root-styles">
-        :root {
-            --color: #fff;
-            --accent-color: #ea0453;
-            --link-color: #fff;
-            --surface-color: rgba(0, 0, 0, 0);
-            --background-color: #000000;
-            --grid-width: 1100px;
-            --default-color: #fff;
-            --default-accent-color: #ea0453;
-            --default-link-color: #fff;
-            --font-family: Share Tech;
-            --secondary-font-family: Share Tech;
-        }
-    </style>
-    <style id="global-styles">
-        .g-1-106-2 {
-            font-size: 2em;
-            line-height: 1.5em;
-        }
-
-        .g-1-125-1 {
-            font-size: 10em;
-            line-height: 1.5em;
-        }
-
-        .g-1-125-2 {
-            font-family: Share Tech;
-            --secondary-font-family: Share Tech;
-            font-size: 2.6em;
-            line-height: 1;
-        }
-
-        .g-1-125-3 {
-        }
-
-        .g-1-142-2 {
-            font-family: Old Standard TT;
-            --secondary-font-family: Old Standard TT;
-            letter-spacing: 0.27em;
-            line-height: 1.325;
-        }
-
-        .g-1-142-3 {
-            font-size: 4em;
-        }
-
-        .g-1-128-2 {
-            font-size: 2.5em;
-            line-height: 1.5em;
-        }
-
-        .g-1-128-4 {
-            font-size: 2.5em;
-            line-height: 1.5em;
-        }
-
-        .g-1-133-2 {
-            font-size: 4.5em;
-        }
-
-        .g-1-133-3 {
-            font-size: 2.5em;
-            line-height: 1.5em;
-        }
-
-        .g-1-149-1 {
-        }
-
-        .g-1-149-2 {
-        }
-
-        .g-1-134-2 {
-            font-size: 4em;
-            line-height: 2em;
-        }
-
-        .g-1-134-3 {
-            font-size: 2.5em;
-            line-height: 1.5em;
-        }
-
-        .g-1-127-3 {
-            font-size: 2em;
-            line-height: 1.5em;
-        }
-
-        .g-1-127-4 {
-            font-size: 2.2em;
-            line-height: 1.58;
-        }
-
-        .g-1-130-5 {
-            font-size: 4em;
-            line-height: 1.5em;
-        }
-
-        .g-1-130-6 {
-            font-size: 2.5em;
-            line-height: 1.5em;
-        }
-
-        .g-1-130-7 {
-            font-size: 2.5em;
-            line-height: 1.5em;
-        }
-
-        .g-1-136-1 {
-            font-size: 3em;
-            letter-spacing: 0.1em;
-            line-height: 3.4em;
-        }
-
-        .g-1-136-2 {
-            font-size: 2.4em;
-            line-height: 1.5em;
-        }
-
-        .g-1-136-3 {
-            font-size: 1.8em;
-            line-height: 1.8;
-        }
-
-        .g-1-136-4 {
-            font-size: 1.7em;
-            line-height: 1;
-        }
-
-        .g-1-136-5 {
-            font-size: 2.4em;
-            line-height: 2.26;
-        }
-
-        .g-1-107-2 {
-            font-size: 9em;
-            letter-spacing: 0.05em;
-            line-height: 0.999;
-        }
-
-        .g-1-107-3 {
-            font-size: 3.3em;
-        }
-
-        .g-1-129-2 {
-        }
-
-        .g-1-129-3 {
-            font-size: 2em;
-            line-height: 1.5em;
-        }
-
-        .g-1-129-5 {
-        }
-
-        .g-1-129-6 {
-            font-size: 2em;
-            line-height: 1.5em;
-        }
-
-        .g-1-129-8 {
-        }
-
-        .g-1-129-9 {
-            font-size: 2em;
-            line-height: 1.5em;
-        }
-
-        .g-1-129-11 {
-        }
-
-        .g-1-129-12 {
-            font-size: 2em;
-            line-height: 1.5em;
-        }
-
-        .g-1-132-3 {
-            font-size: 4em;
-            line-height: 1.6520000000000001;
-        }
-
-        .g-1-132-4 {
-            font-size: 2.5em;
-            line-height: 1.5em;
-        }
-
-        .g-1-132-7 {
-            font-size: 4em;
-            line-height: 1.6521000000000001;
-        }
-
-        .g-1-132-8 {
-            font-size: 2.5em;
-            line-height: 1.5em;
-        }
-
-        .g-1-135-1 {
-            font-size: 3em;
-            letter-spacing: 0.1em;
-            line-height: 3.4em;
-        }
-
-        .g-1-143-1 {
-            letter-spacing: -0.01em;
-            line-height: 1.37;
-            font-size: 3em;
-            font-family: Old Standard TT;
-            --secondary-font-family: Old Standard TT;
-        }
-    </style>
-    <link rel="stylesheet" href="https://static.cmcdn.net/23/1.0.63/styles/all.css" />
-    <link rel="stylesheet" href="https://static.cmcdn.net/23/1.0.63/styles/vendor/swiper.css" />
-    <link rel="stylesheet" href="/styles/fonts.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-<body class="site desktop  " data-min-contrast="0.05">
-    <div class="page loading" style="background:#290b29;--background-color:#290b29;">
-        <span id="navigation_5319896_4809803" class="navigation surface standard  " on-insert="nav:setup">
+<html style="background-color: rgb(41, 11, 41);">
+   <head>
+      <title>Shimin Sun</title>
+      <style id="root-styles">
+         :root {
+         --color: #fff;
+         --accent-color: #ea0453;
+         --link-color: #fff;
+         --surface-color: rgba(0, 0, 0, 0);
+         --background-color: #000000;
+         --grid-width: 1100px;
+         --default-color: #fff;
+         --default-accent-color: #ea0453;
+         --default-link-color: #fff;
+         --font-family: Share Tech;
+         --secondary-font-family: Share Tech;
+         }
+      </style>
+      <style id="global-styles">
+         .g-1-106-2 {
+         font-size: 2em;
+         line-height: 1.5em;
+         }
+         .g-1-125-1 {
+         font-size: 10em;
+         line-height: 1.5em;
+         }
+         .g-1-125-2 {
+         font-family: Share Tech;
+         --secondary-font-family: Share Tech;
+         font-size: 2.6em;
+         line-height: 1;
+         }
+         .g-1-125-3 {
+         }
+         .g-1-142-2 {
+         font-family: Old Standard TT;
+         --secondary-font-family: Old Standard TT;
+         letter-spacing: 0.27em;
+         line-height: 1.325;
+         }
+         .g-1-142-3 {
+         font-size: 4em;
+         }
+         .g-1-128-2 {
+         font-size: 2.5em;
+         line-height: 1.5em;
+         }
+         .g-1-128-4 {
+         font-size: 2.5em;
+         line-height: 1.5em;
+         }
+         .g-1-133-2 {
+         font-size: 4.5em;
+         }
+         .g-1-133-3 {
+         font-size: 2.5em;
+         line-height: 1.5em;
+         }
+         .g-1-149-1 {
+         }
+         .g-1-149-2 {
+         }
+         .g-1-134-2 {
+         font-size: 4em;
+         line-height: 2em;
+         }
+         .g-1-134-3 {
+         font-size: 2.5em;
+         line-height: 1.5em;
+         }
+         .g-1-127-3 {
+         font-size: 2em;
+         line-height: 1.5em;
+         }
+         .g-1-127-4 {
+         font-size: 2.2em;
+         line-height: 1.58;
+         }
+         .g-1-130-5 {
+         font-size: 4em;
+         line-height: 1.5em;
+         }
+         .g-1-130-6 {
+         font-size: 2.5em;
+         line-height: 1.5em;
+         }
+         .g-1-130-7 {
+         font-size: 2.5em;
+         line-height: 1.5em;
+         }
+         .g-1-136-1 {
+         font-size: 3em;
+         letter-spacing: 0.1em;
+         line-height: 3.4em;
+         }
+         .g-1-136-2 {
+         font-size: 2.4em;
+         line-height: 1.5em;
+         }
+         .g-1-136-3 {
+         font-size: 1.8em;
+         line-height: 1.8;
+         }
+         .g-1-136-4 {
+         font-size: 1.7em;
+         line-height: 1;
+         }
+         .g-1-136-5 {
+         font-size: 2.4em;
+         line-height: 2.26;
+         }
+         .g-1-107-2 {
+         font-size: 9em;
+         letter-spacing: 0.05em;
+         line-height: 0.999;
+         }
+         .g-1-107-3 {
+         font-size: 3.3em;
+         }
+         .g-1-129-2 {
+         }
+         .g-1-129-3 {
+         font-size: 2em;
+         line-height: 1.5em;
+         }
+         .g-1-129-5 {
+         }
+         .g-1-129-6 {
+         font-size: 2em;
+         line-height: 1.5em;
+         }
+         .g-1-129-8 {
+         }
+         .g-1-129-9 {
+         font-size: 2em;
+         line-height: 1.5em;
+         }
+         .g-1-129-11 {
+         }
+         .g-1-129-12 {
+         font-size: 2em;
+         line-height: 1.5em;
+         }
+         .g-1-132-3 {
+         font-size: 4em;
+         line-height: 1.6520000000000001;
+         }
+         .g-1-132-4 {
+         font-size: 2.5em;
+         line-height: 1.5em;
+         }
+         .g-1-132-7 {
+         font-size: 4em;
+         line-height: 1.6521000000000001;
+         }
+         .g-1-132-8 {
+         font-size: 2.5em;
+         line-height: 1.5em;
+         }
+         .g-1-135-1 {
+         font-size: 3em;
+         letter-spacing: 0.1em;
+         line-height: 3.4em;
+         }
+         .g-1-143-1 {
+         letter-spacing: -0.01em;
+         line-height: 1.37;
+         font-size: 3em;
+         font-family: Old Standard TT;
+         --secondary-font-family: Old Standard TT;
+         }
+      </style>
+      <link rel="stylesheet" href="https://static.cmcdn.net/23/1.0.63/styles/all.css">
+      <link rel="stylesheet" href="https://static.cmcdn.net/23/1.0.63/styles/vendor/swiper.css">
+      <link rel="stylesheet" href="/styles/fonts.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body class="site desktop custom-cursor" data-min-contrast="0.05" style="--main-top:0px; --nav-height:104px; --footer-height:67px; --container-width:814px;">
+      <div class="page overlap" style="background:#290b29;--background-color:#290b29;">
+         <span id="navigation_5319896_4809803" class="navigation surface standard  " style="--accent-color:#ea0453; --link-color:#ffffff; transition: color 100ms ease-out 0s;">
             <header class="standard  ">
-                <a href="/">
-                    <h1 style="font-size:3.34em;">Shimin Sun</h1>
-                </a>
-                <nav style="display:flex;justify-content:flex-end;align-items:center;flex-flow:row wrap;font-size:2.5em;">
-                    <style>
-                        #navigation_5319896_4809803 > header {
-                            display: flex;
-                            width: 100%;
-                            align-items: center;
-                            justify-content: space-between;
-                            max-width: var(--grid-width);
-                            margin: auto;
-                            position: relative;
-                            z-index: 10;
-                        }
-
-                        #navigation_5319896_4809803 .overlay {
-                            --surface-color: #ff0751;
-                            background: var(--overlay-background-color, #ff0751);
-                        }
-
-                        #navigation_5319896_4809803 nav a:not(:last-child):after {
-                            margin-left: 10px;
-                            margin-right: 10px;
-                            content: '/';
-                        }
-                    </style>
-                    <a class="link_000000005100d82c0000000000000001" href="/"><span>Games</span></a><a class="link_000000005100d82c0000000000000006" href="/about"><span>About</span></a>
-                </nav>
+               <a href="/">
+                  <h1 style="font-size:3.34em;">Shimin Sun</h1>
+               </a>
+               <nav style="display:flex;justify-content:flex-end;align-items:center;flex-flow:row wrap;font-size:2.5em;">
+                  <style>
+                     #navigation_5319896_4809803 > header {
+                     display: flex;
+                     width: 100%;
+                     align-items: center;
+                     justify-content: space-between;
+                     max-width: var(--grid-width);
+                     margin: auto;
+                     position: relative;
+                     z-index: 10;
+                     }
+                     #navigation_5319896_4809803 .overlay {
+                     --surface-color: #ff0751;
+                     background: var(--overlay-background-color, #ff0751);
+                     }
+                     #navigation_5319896_4809803 nav a:not(:last-child):after {
+                     margin-left: 10px;
+                     margin-right: 10px;
+                     content: '/';
+                     }
+                  </style>
+                  <a class="link_000000005100d82c0000000000000001 active" href="/"><span>Games</span></a><a class="link_000000005100d82c0000000000000006" href="/about"><span>About</span></a>
+               </nav>
             </header>
             <div class="hamburger navIcon" on-click="nav:toggle">
-                <svg class="icon" viewBox="0 0 28 28">
-                    <g stroke-width="2" stroke-linecap="round" stroke-miterlimit="10">
-                        <line class="one" x1="4" y1="6" x2="24" y2="6"></line>
-                        <line class="two" x1="4" y1="14" x2="24" y2="14"></line>
-                        <line class="three" x1="4" y1="22" x2="24" y2="22"></line>
-                    </g>
-                </svg>
+               <svg class="icon" viewBox="0 0 28 28">
+                  <g stroke-width="2" stroke-linecap="round" stroke-miterlimit="10">
+                     <line class="one" x1="4" y1="6" x2="24" y2="6"></line>
+                     <line class="two" x1="4" y1="14" x2="24" y2="14"></line>
+                     <line class="three" x1="4" y1="22" x2="24" y2="22"></line>
+                  </g>
+               </svg>
             </div>
-        </span>
-        <div class="guts">
+         </span>
+         <div class="guts">
             <div class="content blocks grid animated">
-                <div class="block_000000005100d82c0000000000000109 block cover align-x-center align-y-center fluid animated cover" style="--surface-color:#000000;" on-insert="block:setup">
-                    <style>
-                        .block_000000005100d82c0000000000000109 > .content {
-                            display: grid;
-                            grid-template-columns: repeat(1, 1fr);
-                        }
-
-                        #item_000000005100d82c0000000000000109_1 {
-                            grid-area: 1 / 1 / 2 / 2;
-                        }
-
-                        #item_000000005100d82c0000000000000109_2 {
-                            letter-spacing: 0.34em;
-                            font-family: Poppins;
-                            --secondary-font-family: Poppins;
-                            font-size: 10vw;
-                        }
-
-                        #item_000000005100d82c0000000000000109_3 {
-                            font-size: 4em;
-                        }
-
-                        .phone .block_000000005100d82c0000000000000109 > .content {
-                            grid-template-columns: repeat(1, 1fr);
-                        }
-
-                        .phone #item_000000005100d82c0000000000000109_2 {
-                            font-size: 1vw;
-                        }
-
-                        .phone #item_000000005100d82c0000000000000109_3 {
-                            font-size: 4vw;
-                        }
-                    </style>
-                    <div class="background" style=";opacity:0.83">
-                        <div class="clipper">
-                            <video poster="https://carbon-media.accelerator.net/0000000mjWM/a5BmtVSmDEIefeRJ9NcF0Q;720x480/frame(1)/quality(80).jpeg" width="720" height="480" src="https://carbon-media.accelerator.net/0000000mjWM/a5BmtVSmDEIefeRJ9NcF0Q;video.mp4" autoplay loop muted playsinline></video>
+               <div class="block_000000005100d82c0000000000000109 block cover align-x-center align-y-center fluid visible" style="--surface-color:#000000; --accent-color:#ea0453; --link-color:#ffffff;">
+                  <style>
+                     .block_000000005100d82c0000000000000109 > .content {
+                     display: grid;
+                     grid-template-columns: repeat(1, 1fr);
+                     }
+                     #item_000000005100d82c0000000000000109_1 {
+                     grid-area: 1 / 1 / 2 / 2;
+                     }
+                     #item_000000005100d82c0000000000000109_2 {
+                     letter-spacing: 0.34em;
+                     font-family: Poppins;
+                     --secondary-font-family: Poppins;
+                     font-size: 10vw;
+                     }
+                     #item_000000005100d82c0000000000000109_3 {
+                     font-size: 4em;
+                     }
+                     .phone .block_000000005100d82c0000000000000109 > .content {
+                     grid-template-columns: repeat(1, 1fr);
+                     }
+                     .phone #item_000000005100d82c0000000000000109_2 {
+                     font-size: 1vw;
+                     }
+                     .phone #item_000000005100d82c0000000000000109_3 {
+                     font-size: 4vw;
+                     }
+                  </style>
+                  <div class="background" style="opacity: 0.83; transform: translateY(15.5px);">
+                     <div class="clipper">
+                        <video poster="https://carbon-media.accelerator.net/0000000mjWM/a5BmtVSmDEIefeRJ9NcF0Q;720x480/frame(1)/quality(80).jpeg" width="720" height="480" src="https://carbon-media.accelerator.net/0000000mjWM/a5BmtVSmDEIefeRJ9NcF0Q;video.mp4" autoplay="" loop="" muted="" playsinline=""></video>
+                     </div>
+                  </div>
+                  <div class="content">
+                     <div id="item_000000005100d82c0000000000000109_1" class="item g-1-142-1 container content padded-container fadeIn">
+                        <div id="item_000000005100d82c0000000000000109_2" class="nested item g-1-142-2 text heading fitty" data-max-font-size="140px" style="visibility: visible; white-space: nowrap; display: inline-block; font-size: 79.5982px;">
+                           <h1>WELCOME</h1>
                         </div>
-                    </div>
-                    <div class="content">
-                        <div id="item_000000005100d82c0000000000000109_1" class="item g-1-142-1 container content padded-container">
-                            <div id="item_000000005100d82c0000000000000109_2" class="nested item g-1-142-2 text heading fitty" data-max-font-size="140px">
-                                <h1>WELCOME</h1>
-                            </div>
-                            <div id="item_000000005100d82c0000000000000109_3" class="nested item g-1-142-3 text subheading">
-                                <h2>Creative Game Design | Unity | C# Programming</h2>
-                            </div>
+                        <div id="item_000000005100d82c0000000000000109_3" class="nested item g-1-142-3 text subheading">
+                           <h2>Creative Game Design | Unity | C# Programming</h2>
                         </div>
-                    </div>
-                </div>
-                <div class="block_000000005100d82c000000000000010a block align-x-center align-y-center animated header" style="--padding-top:107px;--padding-bottom:74px;" on-insert="block:setup">
-                    <style>
-                        .block_000000005100d82c000000000000010a > .content {
-                            display: grid;
-                            grid-template-columns: repeat(0, 1fr);
+                     </div>
+                  </div>
+               </div>
+               <div class="block_000000005100d82c000000000000010a block align-x-center align-y-center header" style="--padding-top:107px; --padding-bottom:74px; --accent-color:#ea0453; --link-color:#ffffff;">
+                  <style>
+                     .block_000000005100d82c000000000000010a > .content {
+                     display: grid;
+                     grid-template-columns: repeat(0, 1fr);
+                     }
+                     #item_000000005100d82c000000000000010a_1 {
+                     line-height: 1.5em;
+                     font-size: 10em;
+                     }
+                     #item_000000005100d82c000000000000010a_2 {
+                     letter-spacing: 0.5em;
+                     line-height: 1.5em;
+                     font-size: 2.2em;
+                     }
+                     #item_000000005100d82c000000000000010a_3 {
+                     }
+                     .phone .block_000000005100d82c000000000000010a > .content {
+                     grid-template-columns: repeat(0, 1fr);
+                     }
+                     .phone #item_000000005100d82c000000000000010a_1 {
+                     font-size: 7vw;
+                     }
+                     .phone #item_000000005100d82c000000000000010a_2 {
+                     font-size: 5vw;
+                     }
+                     .phone #item_000000005100d82c000000000000010a_3 {
+                     margin: 0px 0 20px 0;
+                     }
+                  </style>
+                  <div class="background" style="">
+                  </div>
+                  <div class="content">
+                     <div id="item_000000005100d82c000000000000010a_2" class="item g-1-125-2 text subheading">
+                        <h2><strong>GAMES</strong></h2>
+                     </div>
+                  </div>
+               </div>
+               <div class="block portfolio thumbs block_000000005100d82c000000000000010b framed align-x-center align-y-center" style="--surface-color:linear-gradient(180deg, #deceec 0%, #936fae 30%, #653a75 68%, #4e055d 100%);--font-size:2.11em;--font-family:Poiret One;--font-weight:600;--letter-spacing:0.08em;--line-height:1.75em;--thumb-hover-overlay-color:linear-gradient(45deg, #6507b9 24%, #001ce3 60%, #e300c7 93%);--thumb-hover-overlay-opacity:0.44;--padding-top:19px;--padding-bottom:80px;">
+                  <style></style>
+                  <div class="content text-below">
+                     <style>
+                        #grid_0000000mjWM0000000004j carbon-item {
+                        display: block;
                         }
-
-                        #item_000000005100d82c000000000000010a_1 {
-                            line-height: 1.5em;
-                            font-size: 10em;
+                        #grid_0000000mjWM0000000004j carbon-item:not(:last-child) {
+                        margin-bottom: var(--gap-y);
                         }
-
-                        #item_000000005100d82c000000000000010a_2 {
-                            letter-spacing: 0.5em;
-                            line-height: 1.5em;
-                            font-size: 2.2em;
-                        }
-
-                        #item_000000005100d82c000000000000010a_3 {
-                        }
-
-                        .phone .block_000000005100d82c000000000000010a > .content {
-                            grid-template-columns: repeat(0, 1fr);
-                        }
-
-                        .phone #item_000000005100d82c000000000000010a_1 {
-                            font-size: 7vw;
-                        }
-
-                        .phone #item_000000005100d82c000000000000010a_2 {
-                            font-size: 5vw;
-                        }
-
-                        .phone #item_000000005100d82c000000000000010a_3 {
-                            margin: 0px 0 20px 0;
-                        }
-                    </style>
-                    <div class="background" style="">
-                    </div>
-                    <div class="content">
-                        <div id="item_000000005100d82c000000000000010a_2" class="item g-1-125-2 text subheading">
-                            <h2><strong>GAMES</strong></h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="block portfolio thumbs block_000000005100d82c000000000000010b block framed align-x-center align-y-center animated" style="--surface-color:linear-gradient(180deg, #deceec 0%, #936fae 30%, #653a75 68%, #4e055d 100%);--font-size:2.11em;--font-family:Poiret One;--font-weight:600;--letter-spacing:0.08em;--line-height:1.75em;--thumb-hover-overlay-color:linear-gradient(45deg, #6507b9 24%, #001ce3 60%, #e300c7 93%);--thumb-hover-overlay-opacity:0.44;--padding-top:19px;--padding-bottom:80px;" on-insert="block:setup">
-                    <style></style>
-                    <div class="content text-below">
-                        <style>
-                            #grid_0000000mjWM0000000004j carbon-item {
-                                display: block;
-                            }
-
-                                #grid_0000000mjWM0000000004j carbon-item:not(:last-child) {
-                                    margin-bottom: var(--gap-y);
-                                }
-                        </style>
-                        <carbon-grid id="grid_0000000mjWM0000000004j" style="--gap-x:40px;--gap-y:40px;display:grid;width:100%;grid-gap:var(--gap-x, 0px) var(--gap-y, 0px);--columns:2;grid-template-columns:repeat(var(--columns), 1fr);">
-                            <carbon-column style="grid-column:1">
-                                <carbon-item id="grid_0000000mjWM0000000004j_0" data-index="0">
-                                    <style>
-                                        #grid_0000000mjWM0000000004j_0 .box:before {
-                                            display: block;
-                                            padding-top: 100%;
-                                            content: '';
-                                        }
-                                    </style>
-                                    <a id="thumb_0000000mjWM0000000000A" class="thumb_0000000mjWM0000000000A thumb item" href="/cathrophobia">
-                                        <svg class="placeholder" viewbox="0 0 528 528"></svg>
-                                        <picture>
-                                            <source srcset="https://carbon-media.accelerator.net/0000000mjWM/hjtpUhNwQcDgt595qm6sFf;original.gif 2x" media="(min-width:1056px)" />
-                                            <img src="https://carbon-media.accelerator.net/0000000mjWM/hjtpUhNwQcDgt595qm6sFf;original.gif" />
-                                        </picture>
-                                        <div class="overlay"></div>
-                                    </a>
-                                    <div class="detail ">
-                                        <div class="content text">
-                                            <h3>Cathrophobia</h3>
-                                        </div>
-                                    </div>
-                                </carbon-item>
-                                <carbon-item id="grid_0000000mjWM0000000004j_2" data-index="2">
-                                    <style>
-                                        #grid_0000000mjWM0000000004j_2 .box:before {
-                                            display: block;
-                                            padding-top: 100%;
-                                            content: '';
-                                        }
-                                    </style>
-                                    <a id="thumb_0000000mjWM0000000000G" class="thumb_0000000mjWM0000000000G thumb item" href="/mountain-ogre">
-                                        <svg class="placeholder" viewbox="0 0 528 528"></svg>
-                                        <video class="lazy" data-src="https://carbon-media.accelerator.net/0000000mjWM/3u1VrWnJhx4c07zHLhSI23;528x528/crf(22).mp4" loop autoplay muted playsinline></video>
-                                        <div class="overlay"></div>
-                                    </a>
-                                    <div class="detail ">
-                                        <div class="content text">
-                                            <h3>Mountain Ogre</h3>
-                                        </div>
-                                    </div>
-                                </carbon-item>
-                                <carbon-item id="grid_0000000mjWM0000000004j_4" data-index="4">
-                                    <style>
-                                        #grid_0000000mjWM0000000004j_4 .box:before {
-                                            display: block;
-                                            padding-top: 100%;
-                                            content: '';
-                                        }
-                                    </style>
-                                    <a id="thumb_0000000mjWM0000000000M" class="thumb_0000000mjWM0000000000M thumb item" href="/blow-away">
-                                        <svg class="placeholder" viewbox="0 0 528 528"></svg>
-                                        <video class="lazy" data-src="https://carbon-media.accelerator.net/0000000mjWM/9Tbwqsyyl7SdSXI08WD9nP;528x528/crf(22).mp4" loop autoplay muted playsinline></video>
-                                        <div class="overlay"></div>
-                                    </a>
-                                    <div class="detail ">
-                                        <div class="content text">
-                                            <h3>Blow Away</h3>
-                                        </div>
-                                    </div>
-                                </carbon-item>
-                            </carbon-column>
-                            <carbon-column style="grid-column:2">
-                                <carbon-item id="grid_0000000mjWM0000000004j_1" data-index="1">
-                                    <style>
-                                        #grid_0000000mjWM0000000004j_1 .box:before {
-                                            display: block;
-                                            padding-top: 100%;
-                                            content: '';
-                                        }
-                                    </style>
-                                    <a id="thumb_0000000mjWM0000000000D" class="thumb_0000000mjWM0000000000D thumb item" href="/diablerie">
-                                        <svg class="placeholder" viewbox="0 0 528 528"></svg>
-                                        <video class="lazy" data-src="https://carbon-media.accelerator.net/0000000mjWM/fkJ1Sqy9nGEgeJh6udICwL;528x528/crf(22).mp4" loop autoplay muted playsinline></video>
-                                        <div class="overlay"></div>
-                                    </a>
-                                    <div class="detail ">
-                                        <div class="content text">
-                                            <h3>Diablerie</h3>
-                                        </div>
-                                    </div>
-                                </carbon-item>
-                                <carbon-item id="grid_0000000mjWM0000000004j_3" data-index="3">
-                                    <style>
-                                        #grid_0000000mjWM0000000004j_3 .box:before {
-                                            display: block;
-                                            padding-top: 100%;
-                                            content: '';
-                                        }
-                                    </style>
-                                    <a id="thumb_0000000mjWM0000000000J" class="thumb_0000000mjWM0000000000J thumb item" href="/phictionary">
-                                        <svg class="placeholder" viewbox="0 0 528 528"></svg>
-                                        <picture>
-                                            <source srcset="https://carbon-media.accelerator.net/0000000mjWM/doXLfKBbEhdekTJlR5pGlL;350x350.png?auto=webp 2x" media="(min-width:1056px)" />
-                                            <img src="https://carbon-media.accelerator.net/0000000mjWM/doXLfKBbEhdekTJlR5pGlL;350x350.png?auto=webp" />
-                                        </picture>
-                                        <div class="overlay"></div>
-                                    </a>
-                                    <div class="detail ">
-                                        <div class="content text">
-                                            <h3>Phictionary</h3>
-                                        </div>
-                                    </div>
-                                </carbon-item>
-                                <carbon-item id="grid_0000000mjWM0000000004j_5" data-index="5">
-                                    <style>
-                                        #grid_0000000mjWM0000000004j_5 .box:before {
-                                            display: block;
-                                            padding-top: 100%;
-                                            content: '';
-                                        }
-                                    </style>
-                                    <a id="thumb_0000000mjWM0000000000P" class="thumb_0000000mjWM0000000000P thumb item" href="/bon-c">
-                                        <svg class="placeholder" viewbox="0 0 528 528"></svg>
-                                        <video class="lazy" data-src="https://carbon-media.accelerator.net/0000000mjWM/5jextYyyFlWgdIMnFEk4Be;528x528/crf(22).mp4" loop autoplay muted playsinline></video>
-                                        <div class="overlay"></div>
-                                    </a>
-                                    <div class="detail ">
-                                        <div class="content text">
-                                            <h3>Bon-C</h3>
-                                        </div>
-                                    </div>
-                                </carbon-item>
-                            </carbon-column>
-                        </carbon-grid>
-                    </div>
-                </div>
+                     </style>
+                     <carbon-grid id="grid_0000000mjWM0000000004j" style="--gap-x:40px;--gap-y:40px;display:grid;width:100%;grid-gap:var(--gap-x, 0px) var(--gap-y, 0px);--columns:2;grid-template-columns:repeat(var(--columns), 1fr);">
+                        <carbon-column style="grid-column:1">
+                           <carbon-item id="grid_0000000mjWM0000000004j_0" data-index="0">
+                              <style>
+                                 #grid_0000000mjWM0000000004j_0 .box:before {
+                                 display: block;
+                                 padding-top: 100%;
+                                 content: '';
+                                 }
+                              </style>
+                              <a id="thumb_0000000mjWM0000000000A" class="thumb_0000000mjWM0000000000A thumb item" href="/cathrophobia">
+                                 <svg class="placeholder" viewBox="0 0 528 528"></svg>
+                                 <picture>
+                                    <source srcset="https://carbon-media.accelerator.net/0000000mjWM/hjtpUhNwQcDgt595qm6sFf;original.gif 2x" media="(min-width:1056px)">
+                                    <img src="https://carbon-media.accelerator.net/0000000mjWM/hjtpUhNwQcDgt595qm6sFf;original.gif">
+                                 </picture>
+                                 <div class="overlay"></div>
+                              </a>
+                              <div class="detail ">
+                                 <div class="content text">
+                                    <h3>Cathrophobia</h3>
+                                 </div>
+                              </div>
+                           </carbon-item>
+                           <carbon-item id="grid_0000000mjWM0000000004j_2" data-index="2">
+                              <style>
+                                 #grid_0000000mjWM0000000004j_2 .box:before {
+                                 display: block;
+                                 padding-top: 100%;
+                                 content: '';
+                                 }
+                              </style>
+                              <a id="thumb_0000000mjWM0000000000G" class="thumb_0000000mjWM0000000000G thumb item" href="/mountain-ogre">
+                                 <svg class="placeholder" viewBox="0 0 528 528"></svg>
+                                 <video class="" data-src="https://carbon-media.accelerator.net/0000000mjWM/3u1VrWnJhx4c07zHLhSI23;528x528/crf(22).mp4" loop="" autoplay="" muted="" playsinline="" src="https://carbon-media.accelerator.net/0000000mjWM/3u1VrWnJhx4c07zHLhSI23;528x528/crf(22).mp4"></video>
+                                 <div class="overlay"></div>
+                              </a>
+                              <div class="detail ">
+                                 <div class="content text">
+                                    <h3>Mountain Ogre</h3>
+                                 </div>
+                              </div>
+                           </carbon-item>
+                           <carbon-item id="grid_0000000mjWM0000000004j_4" data-index="4">
+                              <style>
+                                 #grid_0000000mjWM0000000004j_4 .box:before {
+                                 display: block;
+                                 padding-top: 100%;
+                                 content: '';
+                                 }
+                              </style>
+                              <a id="thumb_0000000mjWM0000000000M" class="thumb_0000000mjWM0000000000M thumb item" href="/blow-away">
+                                 <svg class="placeholder" viewBox="0 0 528 528"></svg>
+                                 <video class="" data-src="https://carbon-media.accelerator.net/0000000mjWM/9Tbwqsyyl7SdSXI08WD9nP;528x528/crf(22).mp4" loop="" autoplay="" muted="" playsinline="" src="https://carbon-media.accelerator.net/0000000mjWM/9Tbwqsyyl7SdSXI08WD9nP;528x528/crf(22).mp4"></video>
+                                 <div class="overlay"></div>
+                              </a>
+                              <div class="detail ">
+                                 <div class="content text">
+                                    <h3>Blow Away</h3>
+                                 </div>
+                              </div>
+                           </carbon-item>
+                        </carbon-column>
+                        <carbon-column style="grid-column:2">
+                           <carbon-item id="grid_0000000mjWM0000000004j_1" data-index="1">
+                              <style>
+                                 #grid_0000000mjWM0000000004j_1 .box:before {
+                                 display: block;
+                                 padding-top: 100%;
+                                 content: '';
+                                 }
+                              </style>
+                              <a id="thumb_0000000mjWM0000000000D" class="thumb_0000000mjWM0000000000D thumb item" href="/diablerie">
+                                 <svg class="placeholder" viewBox="0 0 528 528"></svg>
+                                 <video class="" data-src="https://carbon-media.accelerator.net/0000000mjWM/fkJ1Sqy9nGEgeJh6udICwL;528x528/crf(22).mp4" loop="" autoplay="" muted="" playsinline="" src="https://carbon-media.accelerator.net/0000000mjWM/fkJ1Sqy9nGEgeJh6udICwL;528x528/crf(22).mp4"></video>
+                                 <div class="overlay"></div>
+                              </a>
+                              <div class="detail ">
+                                 <div class="content text">
+                                    <h3>Diablerie</h3>
+                                 </div>
+                              </div>
+                           </carbon-item>
+                           <carbon-item id="grid_0000000mjWM0000000004j_3" data-index="3">
+                              <style>
+                                 #grid_0000000mjWM0000000004j_3 .box:before {
+                                 display: block;
+                                 padding-top: 100%;
+                                 content: '';
+                                 }
+                              </style>
+                              <a id="thumb_0000000mjWM0000000000J" class="thumb_0000000mjWM0000000000J thumb item" href="/phictionary">
+                                 <svg class="placeholder" viewBox="0 0 528 528"></svg>
+                                 <picture>
+                                    <source srcset="https://carbon-media.accelerator.net/0000000mjWM/doXLfKBbEhdekTJlR5pGlL;350x350.png?auto=webp 2x" media="(min-width:1056px)">
+                                    <img src="https://carbon-media.accelerator.net/0000000mjWM/doXLfKBbEhdekTJlR5pGlL;350x350.png?auto=webp">
+                                 </picture>
+                                 <div class="overlay"></div>
+                              </a>
+                              <div class="detail ">
+                                 <div class="content text">
+                                    <h3>Phictionary</h3>
+                                 </div>
+                              </div>
+                           </carbon-item>
+                           <carbon-item id="grid_0000000mjWM0000000004j_5" data-index="5">
+                              <style>
+                                 #grid_0000000mjWM0000000004j_5 .box:before {
+                                 display: block;
+                                 padding-top: 100%;
+                                 content: '';
+                                 }
+                              </style>
+                              <a id="thumb_0000000mjWM0000000000P" class="thumb_0000000mjWM0000000000P thumb item" href="/bon-c">
+                                 <svg class="placeholder" viewBox="0 0 528 528"></svg>
+                                 <video class="" data-src="https://carbon-media.accelerator.net/0000000mjWM/5jextYyyFlWgdIMnFEk4Be;528x528/crf(22).mp4" loop="" autoplay="" muted="" playsinline="" src="https://carbon-media.accelerator.net/0000000mjWM/5jextYyyFlWgdIMnFEk4Be;528x528/crf(22).mp4"></video>
+                                 <div class="overlay"></div>
+                              </a>
+                              <div class="detail ">
+                                 <div class="content text">
+                                    <h3>Bon-C</h3>
+                                 </div>
+                              </div>
+                           </carbon-item>
+                        </carbon-column>
+                     </carbon-grid>
+                  </div>
+               </div>
             </div>
-            <footer class="surface  has-branding">
-                <div class="content">
-                    <div class="copyright">&#xA9; Shimin Sun</div>
-                    <a href="https://carbonmade.com/?campaign=c4" target="_blank" class="branding">
-                        <span class="icon"></span>
-                    </a>
-                </div>
+            <footer class="surface  has-branding" style="--accent-color:#ea0453; --link-color:#ffffff;">
+               <div class="content">
+                  <div class="copyright">© Shimin Sun</div>
+                  <a href="https://carbonmade.com/?campaign=c4" target="_blank" class="branding">
+                  <span class="icon"></span>
+                  </a>
+               </div>
             </footer>
-        </div>
-    </div>
-    <script src="https://static.cmcdn.net/libs/player/3.8.2/hls.js"></script>
-    <script src="https://static.cmcdn.net/libs/corejs/2.6.0/corejs.js" integrity="sha256-QINPIB/5r50oO3HftMC6FzCzYFYS93iHgSdO1op/zMM=" crossorigin></script>
-    <script src="https://static.cmcdn.net/libs/router/1.6.0/router.js" integrity="sha256-4IUSi5DVzvBoIJVNfZ416+yuCOs+cry22iJG94eaqW8=" crossorigin></script>
-    <script src="https://static.cmcdn.net/libs/gestures/0.6.0/gestures.js" integrity="sha256-ylEa69hezIFUAga1cMRcngK6Tf9K+HJgzHUSPswYKoU=" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/vendor/anime.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/vendor/swiper.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/libs/cursor/0.6.3/cursor.js" integrity="sha256-K3IY3QiVV2UvpT+BaPTD2YjNCx5nT5LLJvNqGQ3L3Is=" crossorigin></script>
-    <script src="https://static.cmcdn.net/libs/lightbox/0.23.0/lightbox.js" integrity="sha256-t/UfAWPAS6cjMlcR5oslHiY3cL3IVuUpW/ceuFKBZC4=" crossorigin></script>
-    <script src="https://static.cmcdn.net/libs/forms/3.16.0/forms.js" integrity="sha256-FSdk3PBD2/fnr0GK52OCwpR4nXh4QsNA0NGXbopNeg0=" crossorigin></script>
-    <script src="https://static.cmcdn.net/libs/scrollable/3.4.0/scrollable.js" integrity="sha256-baiuPcjdbyEwBScpM1XFcd3KntTAMdNFrfEtB8+Qpm4=" crossorigin></script>
-    <script src="https://static.cmcdn.net/libs/player/3.8.2/player.js" integrity="sha256-5eC5ruDiSOZ8vs10G8QfH7KRtp3Rt8rYNhCUQE/6tPk=" crossorigin></script>
-    <script src="https://static.cmcdn.net/libs/lazyjs/2.5.0/lazyjs.js" integrity="sha256-t7NcyflstmZkZoux0P69OjKyeLS1imfynoTPyePOUDI=" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/chroma.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/contrast.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/functions.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/fitty.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/blocks.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/transitions.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/site/Navigation.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/components/Flipbook.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/components/BeforeAfterBlock.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/browser.js" crossorigin></script>
-    <script src="https://static.cmcdn.net/23/1.0.63/scripts/app.js" crossorigin></script>
-</body>
+         </div>
+      </div>
+   </body>
 </html>
