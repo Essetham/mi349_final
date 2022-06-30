@@ -5,34 +5,45 @@
       <link rel="stylesheet" href="style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
-   <body class="site desktop custom-cursor" data-min-contrast="0.05" style="--main-top:0px; --nav-height:104px; --footer-height:67px; --container-width:814px;">
-      <div class="page overlap" style="background:#290b29;--background-color:#290b29;">
-         <span id="navigation_5319896_4809803" class="navigation surface standard  " style="--accent-color:#ea0453; --link-color:#ffffff; transition: color 100ms ease-out 0s;">
-            <header class="standard  ">
-               <h1 style="font-size:3.34em;">Shimin Sun</h1>
-               <nav style="display:flex;justify-content:flex-end;align-items:center;flex-flow:row wrap;font-size:2.5em;">
+   
                   <style>
-                     #navigation_5319896_4809803 > header {
-                     display: flex;
-                     width: 100%;
-                     align-items: center;
-                     justify-content: space-between;
-                     max-width: var(--grid-width);
-                     margin: auto;
-                     position: relative;
-                     z-index: 10;
+                     #navigation_header > header 
+                     {
+                        --accent-color:#ea0453; 
+                        --link-color:#ffffff; 
+                        transition: color 100ms ease-out 0s;
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: space-between;
+                        max-width: var(--grid-width);
+                        margin: auto;
+                        position: relative;
+                        z-index: 10;
                      }
-                     #navigation_5319896_4809803 .overlay {
-                     --surface-color: #ff0751;
-                     background: var(--overlay-background-color, #ff0751);
+                     h1 > header
+                     {
+                        font-size:3.34em;
                      }
-                     #navigation_5319896_4809803 nav a:not(:last-child):after {
-                     margin-left: 10px;
-                     margin-right: 10px;
-                     content: '/';
+                     nav > header
+                     {
+                        display:flex;
+                        justify-content:flex-end;
+                        align-items:center;
+                        flex-flow:row wrap;
+                        font-size:2.5em;
                      }
                   </style>
-                  <a class="link_000000005100d82c0000000000000006" href="/about"><span>About</span></a>
+   
+   
+   
+   <body class="site desktop custom-cursor" data-min-contrast="0.05" style="--main-top:0px; --nav-height:104px; --footer-height:67px; --container-width:814px;">
+      <div class="page overlap" style="background:#290b29;--background-color:#290b29;">
+         <span id="navigation_header" class="navigation surface standard  ">
+            <header class="standard  ">
+               <h1>Shimin Sun</h1>
+               <nav>
+                  <a class="about_link" href="/about"><span>About</span></a>
                </nav>
             </header>
          </span>
