@@ -48,6 +48,18 @@ div.page.overlap {
     min-height: 100%;
 }
 
+header.standard {
+    padding-left: var(--site-margin);
+    padding-right: var(--site-margin);
+    margin: auto;
+}
+
+.navigation header{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+
 #navigation_5319896_4809803{
     display: flex;
     width: 100%;
@@ -60,18 +72,6 @@ div.page.overlap {
     --accent-color: #ea0453;
     --link-color: #ffffff;
     transition: color 100ms ease-out 0s;
-}
-
-header.standard {
-    padding-left: var(--site-margin);
-    padding-right: var(--site-margin);
-    margin: auto;
-}
-
-.navigation header{
-    padding-top: 30px;
-    padding-bottom: 30px;
-    box-sizing: border-box;
 }
 
 div.page .guts {
