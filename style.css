@@ -23,20 +23,6 @@ body {
 
 
 
-#navigation_5319896_4809803 {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    max-width: var(--grid-width);
-    margin: auto;
-    position: relative;
-    z-index: 10;
-    --accent-color: #ea0453;
-    --link-color: #ffffff;
-    transition: color 100ms ease-out 0s;
-}
-
 header.standard {
     padding-left: var(--site-margin);
     padding-right: var(--site-margin);
@@ -49,47 +35,44 @@ header.standard {
     box-sizing: border-box;
 }
 
-.block {
-    display: block;
-    position: relative;
-    box-sizing: border-box;
-    color: var(--color);
-    font-family: var(--surface-color);
-    word-break: break-word;
-    padding-top: var(--padding-top, 80px);
-    padding-bottom: var(--padding-bottom, 80px);
+ .block.cover {
+    --cover-block-padding: 120px;
+    width: 100%;
+    height: var(--cover-height, 100vh);
+    padding: 0;
+    overflow: hidden;
 }
 
-    .block.cover {
-        --cover-block-padding: 120px;
-        width: 100%;
-        height: var(--cover-height, 100vh);
-        padding: 0;
-        overflow: hidden;
-    }
+.block div {
+    box-sizing: border-box;
+}
 
-    .block div {
-        box-sizing: border-box;
-    }
-
-    .block .background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+.block .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .background {
     opacity: 0.83;
 }
 
-.page.overlap .navigation.standard:not(.sticky) {
-    height: var(--nav-height, unset);
+#navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--grid-width);
+    margin: auto;
     position: relative;
+    --accent-color: #ea0453;
+    --link-color: #ffffff;
+    transition: color 100ms ease-out 0s;
 }
 
-#navigation_5319896_4809803 > header {
+#navbar > header {
     display: flex;
     width: 100%;
     align-items: center;
@@ -114,10 +97,6 @@ header.standard {
 }
 
 .block > .content {
-    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms ease-out;
-}
-
-.block_000000005100d82c0000000000000109 > .content {
     display: grid;
 }
 
